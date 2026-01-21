@@ -1,0 +1,20 @@
+[project]
+name = "vllm-adapter"
+version = "0.1.0"
+description = "vLLM Adapter for VLMHyperBench API Wrapper"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "api-wrapper",
+    "vllm>=0.6.0",
+]
+
+[tool.uv.sources]
+api-wrapper = { path = "../api_wrapper", editable = true }
+
+[build-system]
+requires = ["uv-build"]
+build-backend = "uv_build"
+
+[tool.uv]
+managed = true
